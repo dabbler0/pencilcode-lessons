@@ -70,13 +70,21 @@ Math.seedrandom 'turtle'
         distance.x = Math.max distance.x, Math.abs (data.width / 2) - x
         distance.y = Math.max distance.y, Math.abs (data.height / 2) - y
 
+    win.$('div, button').each ->
+      el = $ @
+      min.x = Math.min min.x, el.offset().left
+      min.y = Math.min min.y, el.offset().top
+
+      max.x = Math.max max.x, el.offset().left + el.width()
+      max.y = Math.max max.y, el.offset().top + el.height()
+
     $(wrapperDiv).css({
       width: max.x - min.x + 50
       height: max.y - min.y + 50
     })
 
     $(@).css {
-      height: Math.max $(@).height(), max.y - min.y + 50
+      minHeight: max.y - min.y + 50
       border: '1px solid black'
     }
 

@@ -13,20 +13,4 @@ Tasks
 
 Extra
 -----
-Did you know? You can do
-```
-speed 100 # Move super fast
-pen red
-fd 100
-```
-
-
-Making a Square
-===============
-
-```
-pen red
-for [1..4]
-  fd 100
-  rt 90
-```
+ 1. Did you know? Adding `speed 100` at the beginning will make the turtle go faster.
