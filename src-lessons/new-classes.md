@@ -24,5 +24,5 @@ Tasks
   1. Subclass the `FortuneTeller`. Maybe make it always return Riches?
   2. Make your own class! Ideas:
     - an `Amoeba` class with an `a.split()` method that makes another `Amoeba` that is slightly different.
-    - a `Color` class with an `a.mixWith(b)` method. **Hint**: pen `rgb(255, 0, 100)` set the pen color with 255 parts red, 0 parts green, and 100 parts blue.
+    - a `Color` class with an `a.mixWith(b)` method. **Hint**: `pen rgb(255, 0, 100)` set the pen color with 255 parts red, 0 parts green, and 100 parts blue.
     - for you mathy people, a `Matrix` class with an `a.multiply(b)` method, or even an `a.determinant()` method.
