@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Lato|Source+Code+Pro);
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.hljs-comment {
+  color: #00F;
+  font-style: italic;
+}
+
+.hljs-keyword {
+  color: #808;
+}
+
+.hljs-number, .hljs-string {
+  color: #5A5;
+}
+
+iframe {
+  border: none;
+}
+
+pre {
+  border: 1px solid black;
+  padding: 2px;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.codespan {
+  color: saddlebrown;
+  background-color: lemonchiffon;
+}
