@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="fields">Fields</h1>
+<p>&quot;Types&quot; of turtles can remember things via <strong>fields</strong>.</p>
+<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GiveUpTurtle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Turtle</span></span>
+  <span class="hljs-attribute">constructor</span>:<span class="hljs-function"> -&gt;</span>
+    <span class="hljs-keyword">super</span>
+    <span class="hljs-property">@timesMoved</span> = <span class="hljs-number">0</span> <span class="hljs-comment"># Make a new field called "timesMoved"</span>
+
+  <span class="hljs-attribute">fd</span>:<span class="hljs-function"> -&gt;</span>
+    <span class="hljs-property">@timesMoved</span> += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-property">@timesMoved</span> &lt; <span class="hljs-number">3</span>
+      <span class="hljs-keyword">super</span>
+
+a = <span class="hljs-keyword">new</span> GiveUpTurtle()
+a.pen red
+<span class="hljs-keyword">for</span> [<span class="hljs-number">1.</span><span class="hljs-number">.10</span>]
+  a.dot red, <span class="hljs-number">20</span>
+  a.fd <span class="hljs-number">100</span>
+<span class="hljs-comment"># Looks like our turtle ran out of gas.</span>
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Use fields to improve your own &quot;turtle type&quot;. Ideas: speedy turtle gets faster every time it moves, growing turtle gets bigger every time it moves, traitor turtle alternates color every time it moves.</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li><p>Did you know? You can pass arguments to turtle instantiation:</p>
+<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BigTurtle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Turtle</span></span>
+  <span class="hljs-attribute">constructor</span>: <span class="hljs-function"><span class="hljs-params">(size)</span> -&gt;</span>
+    <span class="hljs-keyword">super</span>() <span class="hljs-comment"># Why do we need ()? Try removing.</span>
+            <span class="hljs-comment"># Also try `new Turtle 8`.</span>
+    <span class="hljs-property">@scale</span> size
+
+a = <span class="hljs-keyword">new</span> BigTurtle <span class="hljs-number">2</span>
+b = <span class="hljs-keyword">new</span> BigTurtle <span class="hljs-number">4</span>
+c = <span class="hljs-keyword">new</span> BigTurtle <span class="hljs-number">8</span> <span class="hljs-comment"># Oh my goodness</span>
+</code></pre><p>Try making a <code class="codespan">GiveUpTurtle</code> that can go different numbers of times depending on an argument passed to the constructor. For instance, <code class="codespan">new GiveUpTurtle(10)</code> should be able to <code class="codespan">fd</code> 10 times. <strong>Hint</strong>: you will need to store the argument in a field.</p>
+</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

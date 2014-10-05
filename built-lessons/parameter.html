@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="making-a-function-with-a-parameter">Making a Function with a Parameter</h1>
+<p>Functions can take <strong>parameters</strong>, which are variables that take on different values depending on how the function is called.</p>
+<pre><code><span class="hljs-function"><span class="hljs-title">square</span> = <span class="hljs-params">(n)</span> -&gt;</span>
+  pen red
+  <span class="hljs-keyword">for</span> [<span class="hljs-number">1.</span><span class="hljs-number">.4</span>]
+    fd n <span class="hljs-comment"># Use "n" like a variable</span>
+    rt <span class="hljs-number">90</span>
+
+square(<span class="hljs-number">100</span>) <span class="hljs-comment"># Use the "square" function with n = 100</span>
+fd <span class="hljs-number">100</span>
+square(<span class="hljs-number">50</span>) <span class="hljs-comment"># Use the "square" function with n = 50</span>
+</code></pre><h2 id="task">Task</h2>
+<ol>
+<li>Make your own shape resizable using a function and a parameter.</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Did you know? The parentheses are optional in <code class="codespan">square(100)</code>; you can write <code class="codespan">square 100</code>, just like with <code class="codespan">fd</code>, <code class="codespan">rt</code>, and <code class="codespan">lt</code>.</li>
+<li><p>Did you know? You can make your function act like <code class="codespan">random</code> or <code class="codespan">asin</code> (to use it in place of a number) by using the &quot;return&quot; statement:</p>
+<pre><code><span class="hljs-function"><span class="hljs-title">double</span> = <span class="hljs-params">(n)</span> -&gt;</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * n
+
+pen red
+fd double(<span class="hljs-number">50</span>) <span class="hljs-comment"># Use double(50) in place of a number</span>
+</code></pre><p>Try writing a unit-conversion function -- try converting inches on your screen (use a ruler) to pixels.</p>
+</li>
+<li><p>Did you know? You can do:</p>
+<pre><code><span class="hljs-function"><span class="hljs-title">square</span> = <span class="hljs-params">(n, c)</span> -&gt;</span> <span class="hljs-comment"># Two (or more) parameters!</span>
+  pen c <span class="hljs-comment"># Use c in place of a color</span>
+  <span class="hljs-keyword">for</span> [<span class="hljs-number">1.</span><span class="hljs-number">.4</span>]
+    fd n
+    rt <span class="hljs-number">90</span>
+square <span class="hljs-number">80</span>, green
+</code></pre><p>Try making your own shape recolorable, or adding your own kinds of parameters. You can even pass function names (like <code class="codespan">fd</code>) using parameters!</p>
+</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

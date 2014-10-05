@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="using-the-internet">Using the Internet</h1>
+<p>Don&#39;t we already know how to use the Internet? Not like this:</p>
+<pre><code><span class="hljs-comment"># We will fetch some data from the US Census by</span>
+<span class="hljs-comment"># calling $.get on a url.</span>
+$.get <span class="hljs-string">'http://api.census.gov/data/2010/sf1'</span> +
+      <span class="hljs-string">'?get=HCT0030003,PCT0120002&amp;for=state:*'</span>, <span class="hljs-function"><span class="hljs-params">(data)</span> -&gt;</span>
+  <span class="hljs-keyword">for</span> state <span class="hljs-keyword">in</span> data <span class="hljs-comment"># The US Census returns an array of arrays</span>
+    write state[<span class="hljs-number">0</span>] <span class="hljs-comment"># Number of households with children</span>
+    write state[<span class="hljs-number">1</span>] <span class="hljs-comment"># Total male population</span>
+</code></pre><p>Wow, lots of data! See in the program where we requested <code class="codespan">HCT0030003</code> and <code class="codespan">PCT0120002</code>? Those are the census variables we requested, &quot;households with children&quot; and &quot;total male population&quot;. You can change those to whatever you like -- there is a big long list here: <a href="http://api.census.gov/data/2010/sf1/variables.html">http://api.census.gov/data/2010/sf1/variables.html</a>.</p>
+<p>Look up the ANSI state codes to see what the state code numbers mean.</p>
+<h2 id="tasks">Tasks</h2>
+<ol>
+<li>Take some interesting statistics! Do some states have more male population that others? Does number households with children correlate to racial composition? Now you can find out!</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Can you make a program to <em>automatically find correlations</em>? <strong>Hint</strong>: Yes you can. Come up with some programmatic way of determining whether two variables&quot;correlate&quot;. Then make a program to test every pair of variables! People who have taken stats will be able to define &quot;correlation&quot; rigorously, but your method need not be rigorous. Try something out!</li>
+<li>There are many many many sources of data out there, along with some services that are not data (online storage services, online translation services) -- most of which we can interact with this way! Look for other internet resources. Known good ones: openweathermap API, the pencilcode load/save api (request to <code class="codespan">/load/filename</code> and <code class="codespan">/save/filename?data=asdljhasdfjklh</code>). <strong>Hint</strong>: You are looking for a &quot;RESTful&quot; API.</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

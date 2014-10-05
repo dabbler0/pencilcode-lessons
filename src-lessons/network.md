@@ -13,7 +13,7 @@ $.get 'http://api.census.gov/data/2010/sf1' +
 
 Wow, lots of data! See in the program where we requested `HCT0030003` and `PCT0120002`? Those are the census variables we requested, "households with children" and "total male population". You can change those to whatever you like -- there is a big long list here: http://api.census.gov/data/2010/sf1/variables.html.
 
-Look up the ANSI state codes to see what the state code number mean.
+Look up the ANSI state codes to see what the state code numbers mean.
 
 Tasks
 -----
@@ -21,4 +21,5 @@ Tasks
 
 Extra
 -----
-  1. Can you make a program to *automatically find correlations*? **Hint**: yes you can
+  1. Can you make a program to *automatically find correlations*? **Hint**: Yes you can. Come up with some programmatic way of determining whether two variables"correlate". Then make a program to test every pair of variables! People who have taken stats will be able to define "correlation" rigorously, but your method need not be rigorous. Try something out!
+  2. There are many many many sources of data out there, along with some services that are not data (online storage services, online translation services) -- most of which we can interact with this way! Look for other internet resources. Known good ones: openweathermap API, the pencilcode load/save api (request to `/load/filename` and `/save/filename?data=asdljhasdfjklh`). **Hint**: You are looking for a "RESTful" API.

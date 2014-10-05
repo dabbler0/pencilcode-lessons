@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="asynchronicity">Asynchronicity</h1>
+<h2 id="the-problem">The Problem</h2>
+<pre><code>fd <span class="hljs-number">100</span>
+write getxy() <span class="hljs-comment"># getxy() returns turtle position</span>
+<span class="hljs-comment"># Hang on I thought I told you to move.</span>
+</code></pre><p>The turtle takes is own slow time to move. <code class="codespan">fd 100</code> doesn&#39;t actually <strong>move</strong> the turtle; it just <strong>schedules</strong> a move, which the turtle will do eventually. We can fix this with <code class="codespan">speed Infinity</code>, but sometimes that&#39;s not what we want:</p>
+<pre><code>speed Infinity
+fd <span class="hljs-number">100</span>
+write getxy()
+</code></pre><p>This is an especially big problem when we are trying to do infinite loops with <code class="codespan">while true</code>. The turtle gets so caught up <strong>scheduling</strong> motion that it never actually starts to move. How can we fix this?</p>
+<h2 id="the-solution">The Solution</h2>
+<p>We can use the <code class="codespan">await</code> command in Iced CoffeeScript.</p>
+<pre><code>fd <span class="hljs-number">100</span>
+await button <span class="hljs-string">'Continue'</span>, defer()
+fd <span class="hljs-number">100</span>
+</code></pre><p>This is the same as:</p>
+<pre><code>fd <span class="hljs-number">100</span>
+button <span class="hljs-string">'Continue'</span>,<span class="hljs-function"> -&gt;</span>
+  fd <span class="hljs-number">100</span>
+</code></pre><p>The <code class="codespan">await</code> command automatically makes a function that contains the rest of your program. <code class="codespan">await</code> is extremely convenient and sometimes necessary in constructions like loops, where it is not immediately clear how to make a function that contains the rest of your program (<strong>Hint</strong>: to do so, you need recursion).</p>
+<h2 id="tasks">Tasks</h2>
+<ol>
+<li>Use a program that uses <code class="codespan">while true</code> along with <code class="codespan">await</code> to make an animation that runs forever. Ideas: infinite polka-dots, infinite random motion.</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Can you write the same code as Task 1 without using <code class="codespan">await</code>? You will need to use recursion.</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

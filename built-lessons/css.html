@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="css">CSS</h1>
+<p>Stands for <strong>Cascading Style Sheets</strong>. Remember the <code class="codespan">write</code> function?</p>
+<pre><code>words = write <span class="hljs-string">'Hello Everyone!'</span>
+</code></pre><p>That&#39;s boring though, let&#39;s do something flashier:</p>
+<pre><code>words = write <span class="hljs-string">'Hello Everyone!'</span>
+words.css {
+  <span class="hljs-string">'color'</span>: <span class="hljs-string">'brown'</span>
+  <span class="hljs-string">'background-color'</span>: <span class="hljs-string">'yellow'</span>
+  <span class="hljs-string">'font-family'</span>: <span class="hljs-string">'Courier New'</span> <span class="hljs-comment"># font</span>
+  <span class="hljs-string">'font-size'</span>: <span class="hljs-string">'30px'</span>
+  <span class="hljs-string">'border'</span>: <span class="hljs-string">'3px solid blue'</span>
+  <span class="hljs-string">'border-radius'</span>: <span class="hljs-string">'5px'</span> <span class="hljs-comment"># rounded corners</span>
+}
+</code></pre><p>You can find a list of css properties here: <a href="http://www.w3schools.com/cssref/">http://www.w3schools.com/cssref/</a>.</p>
+<h2 id="tasks">Tasks</h2>
+<ol>
+<li>Make your own styled text! Make more than one piece of text. Use different css properties. Arrange them into a webpage (remember, <code class="codespan">write</code> returns a kind of <code class="codespan">Turtle</code>). Ideas: a website for your favourite book or movie, a website for your club.</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Did you know? You can also retrieve css properties:<pre><code>words = write <span class="hljs-string">'Hello Everyone'</span>
+<span class="hljs-comment"># `words` now has the default font; what is that font?</span>
+write words.css(<span class="hljs-string">'font-family'</span>) <span class="hljs-comment"># get css property</span>
+</code></pre>Investigate more defaults.</li>
+<li>Try making a piece of text that changes styles when you click it.</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

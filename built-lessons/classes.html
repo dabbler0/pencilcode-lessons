@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="types-of-turtles">Types of Turtles</h1>
+<p>We can make &quot;types&quot; of turtles by <strong>subclassing</strong>.</p>
+<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DisobedientTurtle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Turtle</span></span>
+  <span class="hljs-attribute">fd</span>:<span class="hljs-function"> -&gt;</span> <span class="hljs-comment"># Override the "fd" command to mean something else</span>
+    <span class="hljs-property">@label</span> <span class="hljs-string">"No"</span> <span class="hljs-comment"># Use @ to issue a command to yourself</span>
+
+a = <span class="hljs-keyword">new</span> Turtle()
+b = <span class="hljs-keyword">new</span> DisobedientTurtle()
+
+a.pen red
+b.pen red
+
+a.fd <span class="hljs-number">100</span>
+b.fd <span class="hljs-number">100</span> <span class="hljs-comment"># Hey wait a minute</span>
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Make your own kinds of turtles! Ideas: super-speedy turtle, always-moves-sideways turtle, always-looks-like-a-cat turtle.</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li><p>Did you know? The <code class="codespan">super</code> keyword can access the &quot;normal&quot; behaviour, even if you&#39;ve overridden it.</p>
+<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ComplainingTurtle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Turtle</span></span>
+  <span class="hljs-attribute">fd</span>:<span class="hljs-function"> -&gt;</span>
+    <span class="hljs-property">@label</span> <span class="hljs-string">'No'</span>
+    <span class="hljs-keyword">super</span> <span class="hljs-comment"># Okay fine whatever</span>
+
+a = <span class="hljs-keyword">new</span> ComplainingTurtle()
+a.pen red
+
+<span class="hljs-comment"># Everyone move forward</span>
+fd <span class="hljs-number">100</span>
+a.fd <span class="hljs-number">100</span> <span class="hljs-comment"># Okay fine</span>
+</code></pre></li>
+<li><p>Did you know? The <code class="codespan">constructor</code> method is special, and happens immediately when the turtle is created.</p>
+<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NestTurtle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Turtle</span></span>
+  <span class="hljs-attribute">constructor</span>:<span class="hljs-function"> -&gt;</span> <span class="hljs-comment"># Immediately when the turtle is made</span>
+    <span class="hljs-keyword">super</span> <span class="hljs-comment"># (gotta make sure the turtle's actually made)</span>
+    <span class="hljs-property">@dot</span> brown, <span class="hljs-number">100</span>
+
+a = <span class="hljs-keyword">new</span> NestTurtle()
+</code></pre></li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

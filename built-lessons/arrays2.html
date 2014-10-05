@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="modifying-arrays">Modifying Arrays</h1>
+<p>Arrays can change as the program runs.</p>
+<pre><code>history = [] <span class="hljs-comment"># Make an empty array to begin with</span>
+pen red
+button <span class="hljs-string">'forward'</span>,<span class="hljs-function"> -&gt;</span>
+  fd <span class="hljs-number">50</span>
+  history.push <span class="hljs-string">'forward'</span> <span class="hljs-comment"># Add "forward" to the array</span>
+button <span class="hljs-string">'right'</span>,<span class="hljs-function"> -&gt;</span>
+  rt <span class="hljs-number">90</span>
+  history.push <span class="hljs-string">'right'</span> <span class="hljs-comment"># Add "right" to the array</span>
+button <span class="hljs-string">'show history'</span>,<span class="hljs-function"> -&gt;</span>
+  write history
+</code></pre><p>You can also remove elements from arrays.</p>
+<pre><code>history = []
+pen red
+button <span class="hljs-string">'forward'</span>,<span class="hljs-function"> -&gt;</span>
+  fd <span class="hljs-number">50</span>
+  history.push <span class="hljs-string">'forward'</span>
+button <span class="hljs-string">'right'</span>,<span class="hljs-function"> -&gt;</span>
+  rt <span class="hljs-number">90</span>
+  history.push <span class="hljs-string">'right'</span>
+button <span class="hljs-string">'undo'</span>,<span class="hljs-function"> -&gt;</span>
+  move = history.pop() <span class="hljs-comment"># Remove an element and see what it was</span>
+  write move
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Finish the &quot;undo&quot; program, and make it actually undo the move.</li>
+<li>Make your own program that can undo things. Idea: click anywhere on the screen to make a dot, press a button to undo the dot-making.</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>
