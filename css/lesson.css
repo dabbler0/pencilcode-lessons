@@ -13,7 +13,7 @@ body {
   color: #808;
 }
 
-.hljs-number {
+.hljs-number, .hljs-string {
   color: #5A5;
 }
 
