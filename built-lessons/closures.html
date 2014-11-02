@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="closures">Closures</h1>
+<p>Since functions and command names are just like normal values, we can make a &quot;function factory&quot;:</p>
+<pre><code><span class="hljs-function"><span class="hljs-title">makeShapeFunction</span> = <span class="hljs-params">(sides)</span> -&gt;</span>
+<span class="hljs-function">  <span class="hljs-title">shape</span> = <span class="hljs-params">(n)</span> -&gt;</span> <span class="hljs-comment"># Create a function on-the-fly</span>
+    <span class="hljs-keyword">for</span> [<span class="hljs-number">1.</span>.sides]
+      fd n
+      rt <span class="hljs-number">360</span> / sides
+
+  <span class="hljs-keyword">return</span> shape <span class="hljs-comment"># Return the new function we just created</span>
+
+<span class="hljs-comment"># Use the "function factory" to create functions:</span>
+triangle = makeShapeFunction(<span class="hljs-number">3</span>)
+square = makeShapeFunction(<span class="hljs-number">4</span>)
+pentagon = makeShapeFunction(<span class="hljs-number">5</span>)
+
+<span class="hljs-comment"># Use the new functions we just created:</span>
+pen red
+triangle <span class="hljs-number">100</span>
+square <span class="hljs-number">100</span>
+pentagon <span class="hljs-number">100</span>
+</code></pre><p>The concept of extra information being attached to a function (the <code class="codespan">sides</code> variable, in this case) is called a <strong>closure</strong>.</p>
+<h2 id="tasks">Tasks</h2>
+<ol>
+<li>Try making a &quot;function factory&quot; like this, but for stars instead.</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Can you make a function factory... <em>for function factories</em>? Yes, you can! Try making a function factory factory. One idea: the first factory decides what the sides of the polygon will look like, and the second factory decides how many sides it will have.</li>
+<li>Why not just have a <code class="codespan">polygon</code> function that takes a bunch of parameters? Because with &quot;function factories&quot;, you can fill out some of the arguments to a function, and not others. For instance, polygon function might say<pre><code>polygon(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>) <span class="hljs-comment"># Make a square with side length 100</span>
+</code></pre>Our &quot;function factory&quot; can just as easily say:<pre><code>makeShapeFunction(<span class="hljs-number">4</span>)(<span class="hljs-number">100</span>)
+</code></pre>But it can also do &quot;partial application&quot;, and wait between passing arguments:<pre><code>f = makeShapeFunction(<span class="hljs-number">4</span>)
+<span class="hljs-comment"># ... do some other stuff ...</span>
+f <span class="hljs-number">100</span>
+</code></pre>Using <code class="codespan">makeShapeFunction</code> instead of <code class="codespan">polygon</code> is called <strong>currying</strong>, named after Haskell Curry, who loved this kind of thing. You can Google him! He is famous. There is a programming language named after him.</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

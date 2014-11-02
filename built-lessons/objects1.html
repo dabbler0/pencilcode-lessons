@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="objects">Objects</h1>
+<p>Objects are like dictionaries. They map keys to values.</p>
+<pre><code>dictionary = {
+  <span class="hljs-string">'dictionary'</span>: <span class="hljs-string">'A book with definitions'</span>
+  <span class="hljs-string">'program'</span>: <span class="hljs-string">'Instructions a computer can follow'</span>
+  <span class="hljs-string">'aardwolf'</span>: <span class="hljs-string">'Some kind of animal? does it look like a wolf'</span>
+  <span class="hljs-string">'cacodemomania'</span>: <span class="hljs-string">'guys what does this mean'</span>
+  <span class="hljs-string">'1-iodo-3-methylpent-2-ene'</span>: <span class="hljs-string">'guys seriously what'</span>
+}
+
+write dictionary[<span class="hljs-string">'program'</span>]
+write dictionary[<span class="hljs-string">'1-iodo-3-methylpent-2-ene'</span>]
+</code></pre><p>You can also modify objects on-the-fly; each property is like a variable.</p>
+<pre><code>dictionary = {} <span class="hljs-comment"># Empty object</span>
+
+dictionary[<span class="hljs-string">'on-the-fly'</span>] = <span class="hljs-string">'While things are happening'</span>
+write dictionary[<span class="hljs-string">'on-the-fly'</span>]
+dictionary[<span class="hljs-string">'on-the-fly'</span>] = <span class="hljs-string">'While the program is running'</span>
+write dictionary[<span class="hljs-string">'on-the-fly'</span>]
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Use objects in your own project! Ideas:<ul>
+<li>Make a simple translator program. <code class="codespan">read</code> in a sentence in French (or other language) and output English with words translated one-to-one (it will be a comically bad translation). <strong>Hint</strong>: <code class="codespan">&#39;hello world&#39;.split(&#39; &#39;)</code> is <code class="codespan">[&#39;hello&#39;, &#39;world&#39;]</code>.</li>
+<li>Make a dictionary that the user can add definitions to and look up words in. A simple design might have and &quot;add word&quot; button and a &quot;lookup&quot; button that bring up inputs. <strong>Hint</strong>: Use <code class="codespan">read</code> and <code class="codespan">button</code>. You will need nested functions!</li>
+</ul>
+</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Did you know? For certain key values, you can just use &quot;.&quot; instead of brackets: <code class="codespan">dictionary.program</code> works the same as <code class="codespan">dictionary[&#39;program&#39;]</code>. This only works for keys with no spaces or punctuation.</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="making-your-own-classes">Making Your Own Classes</h1>
+<p>Classes don&#39;t just have to be turtles! You can make whatever types you want:</p>
+<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FortuneTeller</span></span>
+  <span class="hljs-attribute">constructor</span>: <span class="hljs-function"><span class="hljs-params">(choices)</span> -&gt;</span>
+    <span class="hljs-property">@choices</span> = choices
+
+  <span class="hljs-attribute">getFortune</span>: <span class="hljs-function">-&gt;</span>
+    card = random(<span class="hljs-number">0</span>, <span class="hljs-property">@choices</span>.length)
+    <span class="hljs-keyword">return</span> <span class="hljs-property">@choices</span>[card]
+
+a = <span class="hljs-keyword">new</span> FortuneTeller([<span class="hljs-string">'Riches'</span>, <span class="hljs-string">'Death'</span>, <span class="hljs-string">'Sickness'</span>, <span class="hljs-string">'Love'</span>])
+write a.getFortune()
+write a.getFortune()
+write a.getFortune()
+
+b = <span class="hljs-keyword">new</span> FortuneTeller([<span class="hljs-string">'Riches'</span>, <span class="hljs-string">'Riches'</span>, <span class="hljs-string">'Riches'</span>])
+write b.getFortune() <span class="hljs-comment"># Oh what a relief</span>
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Subclass the <code class="codespan">FortuneTeller</code>. Maybe make it always return Riches?</li>
+<li>Make your own class! Ideas:<ul>
+<li>an <code class="codespan">Amoeba</code> class with an <code class="codespan">a.split()</code> method that makes another <code class="codespan">Amoeba</code> that is slightly different.</li>
+<li>a <code class="codespan">Color</code> class with an <code class="codespan">a.mixWith(b)</code> method. <strong>Hint</strong>: <code class="codespan">pen rgb(255, 0, 100)</code> set the pen color with 255 parts red, 0 parts green, and 100 parts blue.</li>
+<li>for you mathy people, a <code class="codespan">Matrix</code> class with an <code class="codespan">a.multiply(b)</code> method, or even an <code class="codespan">a.determinant()</code> method.</li>
+</ul>
+</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

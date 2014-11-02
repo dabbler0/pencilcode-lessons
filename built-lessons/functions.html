@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="making-a-function">Making a Function</h1>
+<p>A <strong>function</strong> is a set of instructions that can be recalled and done again any time.</p>
+<pre><code><span class="hljs-function"><span class="hljs-title">square</span> = -&gt;</span> <span class="hljs-comment"># Define a function, and call it "square"</span>
+  pen red <span class="hljs-comment"># Everything inside the function must be indented.</span>
+  <span class="hljs-keyword">for</span> [<span class="hljs-number">1.</span><span class="hljs-number">.4</span>]
+    fd <span class="hljs-number">100</span>
+    rt <span class="hljs-number">90</span>
+
+square() <span class="hljs-comment"># Use the "square" function</span>
+fd <span class="hljs-number">100</span>
+square() <span class="hljs-comment"># Use it again</span>
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Make your own shape into a function and use it more than once.</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li><p>Did you know? You can do</p>
+<pre><code><span class="hljs-function"><span class="hljs-title">move</span> = -&gt;</span>
+ fd <span class="hljs-number">100</span>
+
+button <span class="hljs-string">'Move!'</span>, move <span class="hljs-comment"># This button will make the turtle move</span>
+</code></pre><p>The button will call the <code class="codespan">move</code> function every time it is pressed. Try making a &quot;remote-control&quot; turtle!</p>
+</li>
+<li><p>Did you know? You can do</p>
+<pre><code><span class="hljs-function"><span class="hljs-title">move</span> = -&gt;</span>
+ fd <span class="hljs-number">100</span>
+
+tick <span class="hljs-number">1</span>, move
+</code></pre><p><code class="codespan">move</code> will be called once per second.</p>
+</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

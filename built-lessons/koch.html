@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="making-the-koch-snowflake">Making the Koch Snowflake</h1>
+<pre><code><span class="hljs-function"><span class="hljs-title">koch</span> = <span class="hljs-params">(n)</span> -&gt;</span>
+  <span class="hljs-keyword">if</span> n &gt; <span class="hljs-number">1</span>
+    koch n / <span class="hljs-number">3</span>
+    lt <span class="hljs-number">60</span>
+    koch n / <span class="hljs-number">3</span>
+    rt <span class="hljs-number">120</span>
+    koch n / <span class="hljs-number">3</span>
+    lt <span class="hljs-number">60</span>
+    koch n / <span class="hljs-number">3</span>
+  <span class="hljs-keyword">else</span>
+    fd <span class="hljs-number">1</span>
+
+pen red
+koch <span class="hljs-number">100</span>
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Make the real Koch snowflake, closed on all sides (Google for an image). <strong>Hint</strong>: Use <code class="codespan">speed</code> to speed up your turtle drawing.</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Try drawing another fractal -- good ones are the quadric cross, Sierpinski triangle, or Vicsek fractal (you can Google them). <code class="codespan">wear &#39;/img/fractal&#39;</code> is cheating.</li>
+<li>Make up your own fractal!</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

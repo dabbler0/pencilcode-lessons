@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="arrays">Arrays</h1>
+<p>An array is a list of things.</p>
+<pre><code>colors = [red, orange, yellow, green, blue]
+
+<span class="hljs-keyword">for</span> color <span class="hljs-keyword">in</span> colors <span class="hljs-comment"># Loop through all the elements in a list</span>
+  pen color
+  fd <span class="hljs-number">50</span>
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Try using an array in your own project! Ideas:<ul>
+<li>make a multicolored lollipop head.</li>
+<li>make an array of turtles, and have them all do the same things. For a better effect, move them to different places first, then have them do the same things.</li>
+</ul>
+</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Did you know? You can get elements of arrays directly:<pre><code>colors = [red, orange, yellow, green, blue]
+dot colors[<span class="hljs-number">0</span>], <span class="hljs-number">100</span> <span class="hljs-comment"># The "0th" (first) element (red)</span>
+dot colors[<span class="hljs-number">1</span>], <span class="hljs-number">50</span> <span class="hljs-comment"># The "1th" (second) element (orange)</span>
+</code></pre></li>
+<li>Did you know? You can have arrays of arrays:<pre><code>sets = [
+  [red, orange, yellow]
+  [pink, blue, violet]
+  [lightgreen, green, yellow]
+  [pink, red, purple]
+]
+<span class="hljs-keyword">for</span> set <span class="hljs-keyword">in</span> sets
+  dot set[<span class="hljs-number">0</span>], <span class="hljs-number">30</span>
+  dot set[<span class="hljs-number">1</span>], <span class="hljs-number">20</span>
+  dot set[<span class="hljs-number">2</span>], <span class="hljs-number">10</span>
+  slide <span class="hljs-number">30</span>
+</code></pre>Use this in your project! Idea: make dots at different coordinates (0th element is the x coordinate, 1th element is the y coordinate), make multiple themes of &quot;rainbow stripes&quot;.</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>
