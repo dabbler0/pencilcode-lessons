@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="foundations-of-a-game">Foundations of a Game</h1>
+<p>Keyboard control:</p>
+<pre><code>tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+  <span class="hljs-keyword">if</span> pressed <span class="hljs-string">'up'</span>
+    fd <span class="hljs-number">10</span>
+  <span class="hljs-keyword">if</span> pressed <span class="hljs-string">'right'</span>
+    rt <span class="hljs-number">10</span>
+</code></pre><p>Mouse control:</p>
+<pre><code>tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+  turnto lastmousemove
+  fd <span class="hljs-number">10</span>
+</code></pre><p>Enemy turtles:</p>
+<pre><code>enemy = <span class="hljs-keyword">new</span> Turtle()
+tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+  enemy.turnto turtle <span class="hljs-comment"># turtle is the original "main" turtle</span>
+  enemy.fd <span class="hljs-number">10</span>
+</code></pre><p>Death:</p>
+<pre><code>tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+  <span class="hljs-keyword">if</span> touches enemy <span class="hljs-comment"># Test if we are touching the enemy</span>
+    tick <span class="hljs-literal">null</span> <span class="hljs-comment"># Stop the game</span>
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Using the above code snippets, try writing a game of tag. <strong>Hint</strong>: <code class="codespan">tick</code> can only be used once in your program. If you have multiple <code class="codespan">tick</code>s, instead try putting all the code into one <code class="codespan">tick</code>.</li>
+<li>Either improve your game of tag or write your own game. Ideas for improving this game:<ul>
+<li>Have a score that increases with time, and print out the score when you die</li>
+<li>Have a &quot;target&quot; turtle that runs away, and your score increases when you hit it</li>
+</ul>
+</li>
+<li>Ideas for writing your own game:<ul>
+<li>Did you know? You can do <code class="codespan">touches red</code> to test if you are touching red. Can you do something clever with pen colors? For instance, a game of Snake.</li>
+<li>Did you know? You can do <code class="codespan">distance(enemy)</code> to get the numerical distance to another turtle. Can you do something clever with this? For instance, a two-player game where you can&#39;t get too far apart?</li>
+<li>Did you know? You can do:<pre><code>click -&gt;
+ dot red, <span class="hljs-number">100</span>
+</code></pre>Try making a game of whack-a-mole.</li>
+</ul>
+</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

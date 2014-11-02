@@ -6,11 +6,11 @@
     <h1 id="fields">Fields</h1>
 <p>&quot;Types&quot; of turtles can remember things via <strong>fields</strong>.</p>
 <pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GiveUpTurtle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Turtle</span></span>
-  <span class="hljs-attribute">constructor</span>:<span class="hljs-function"> -&gt;</span>
+  <span class="hljs-attribute">constructor</span>: <span class="hljs-function">-&gt;</span>
     <span class="hljs-keyword">super</span>
     <span class="hljs-property">@timesMoved</span> = <span class="hljs-number">0</span> <span class="hljs-comment"># Make a new field called "timesMoved"</span>
 
-  <span class="hljs-attribute">fd</span>:<span class="hljs-function"> -&gt;</span>
+  <span class="hljs-attribute">fd</span>: <span class="hljs-function">-&gt;</span>
     <span class="hljs-property">@timesMoved</span> += <span class="hljs-number">1</span>
     <span class="hljs-keyword">if</span> <span class="hljs-property">@timesMoved</span> &lt; <span class="hljs-number">3</span>
       <span class="hljs-keyword">super</span>
