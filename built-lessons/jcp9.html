@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="making-a-game">Making a Game</h1>
+<p>Keyboard control:</p>
+<pre><code>tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+  <span class="hljs-keyword">if</span> pressed <span class="hljs-string">'up'</span>
+    fd <span class="hljs-number">5</span>
+  <span class="hljs-keyword">if</span> pressed <span class="hljs-string">'right'</span>
+    rt <span class="hljs-number">5</span>
+</code></pre><p>Mouse control:</p>
+<pre><code>tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+  turnto lastmousemove
+  fd <span class="hljs-number">5</span>
+</code></pre><p>Enemies:</p>
+<pre><code>b = <span class="hljs-keyword">new</span> Turtle()
+tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+  b.turnto turtle
+  b.fd <span class="hljs-number">5</span>
+</code></pre><p>Death (or victory):</p>
+<pre><code>b = <span class="hljs-keyword">new</span> Turtle()
+tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+  <span class="hljs-keyword">if</span> touches b
+    write <span class="hljs-string">'You lose/win/something!'</span>
+    tick <span class="hljs-literal">null</span>
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Use these snippets to make a game. Some ideas: tag, race, dodgeball. Did you know? <code class="codespan">touches red</code> tests to see if the turtle is touching red. Can you make some clever game using the turtle pen?</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

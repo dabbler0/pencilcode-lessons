@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="variables">Variables</h1>
+<p>Remember the bulls-eye?</p>
+<pre><code>dot black, <span class="hljs-number">60</span>
+dot white, <span class="hljs-number">40</span>
+dot black, <span class="hljs-number">20</span>
+</code></pre><p>How would we do the bulls-eye a random color?</p>
+<pre><code>dot (random color), <span class="hljs-number">60</span>
+dot white, <span class="hljs-number">40</span>
+dot (random color), <span class="hljs-number">20</span>
+</code></pre><p>This doesn&#39;t work quite right, because the two colors are different. To make them the same, we have to use a <strong>variable</strong>:</p>
+<pre><code>x = random color
+dot x, <span class="hljs-number">60</span>
+dot white, <span class="hljs-number">40</span>
+dot x, <span class="hljs-number">20</span>
+</code></pre><p><code class="codespan">x = random color</code> <strong>stores</strong> the color in <code class="codespan">x</code>, so that it is the same every time throughout the rest of the program.</p>
+<h2 id="tasks">Tasks</h2>
+<ol>
+<li>Try making a square that is a random size. You will need to make a random number, like <code class="codespan">x = random 100</code>.</li>
+<li>Use this to make a symmetric random picture.</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

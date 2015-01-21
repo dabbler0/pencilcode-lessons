@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="variables-that-change">Variables that Change</h1>
+<p>You can overwrite the value of <code class="codespan">x</code>:</p>
+<pre><code>pen red
+x = <span class="hljs-number">50</span>
+fd x
+rt <span class="hljs-number">90</span>
+x = <span class="hljs-number">100</span>
+fd x
+</code></pre><p>First <code class="codespan">x</code> is <code class="codespan">50</code>, then it is <code class="codespan">100</code>. You can use math when assigning variables:</p>
+<pre><code>pen red
+x = <span class="hljs-number">5</span> * <span class="hljs-number">5</span>
+fd x
+</code></pre><p>You can even use <code class="codespan">x</code> itself; this will always refer to the <strong>old</strong> x. For instance, <code class="codespan">x = x + 50</code> below <strong>increases x by <code class="codespan">50</code></strong>.</p>
+<pre><code>pen red
+x = <span class="hljs-number">50</span>
+fd x
+rt <span class="hljs-number">90</span>
+x = x + <span class="hljs-number">50</span>
+fd x
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>Use an increasing variable and a loop to make an outward spiral. What happens if you <em>multiply</em> <code class="codespan">x</code> every time instead of <em>adding</em> to it?</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>

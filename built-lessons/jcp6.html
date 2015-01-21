@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="events">Events</h1>
+<pre><code>button <span class="hljs-string">'Click me!'</span>, <span class="hljs-function">-&gt;</span>
+  fd <span class="hljs-number">100</span>
+</code></pre><p>You can click the button as many times as you like. Like with <code class="codespan">for</code> loops, make sure everything is indented correctly.</p>
+<pre><code>button <span class="hljs-string">'Click me!'</span>, <span class="hljs-function">-&gt;</span>
+  bk <span class="hljs-number">100</span>
+pen red
+fd <span class="hljs-number">100</span>
+</code></pre><p>Notice that, because <code class="codespan">pen red</code> and <code class="codespan">fd 100</code> are not indented, they happen right away. <code class="codespan">bk 100</code> doesn&#39;t happen until you click the button.</p>
+<h2 id="tasks">Tasks</h2>
+<ol>
+<li>Try making a &quot;remote-control&quot; turtle. Have buttons for &quot;move forward&quot;, &quot;turn left&quot;, etc.</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Try this:<pre><code>click -&gt;
+  fd <span class="hljs-number">100</span>
+</code></pre>It will happen when you click on the turtle. Try making a whack-a-mole game (remember <code class="codespan">moveto random position</code>?).</li>
+</ol>
+
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>
