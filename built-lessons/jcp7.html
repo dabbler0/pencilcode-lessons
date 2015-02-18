@@ -5,25 +5,25 @@
   <body>
     <h1 id="-tick-and-if-"><code class="codespan">Tick</code> and <code class="codespan">If</code></h1>
 <p>Try this:</p>
-<pre><code>tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+<pre><code>forever -&gt;
   fd <span class="hljs-number">5</span>
   rt <span class="hljs-number">2</span>
-</code></pre><p><code class="codespan">tick 60</code> makes the turtle do something 60 times a second, forever. Like with buttons, make sure everything is indented properly.</p>
+</code></pre><p><code class="codespan">forever</code> will make the turtle do something repeatedly forever. Like with loops, make sure everything is indented properly.</p>
 <h2 id="tasks">Tasks</h2>
 <ol>
-<li>Can you figure out how to make the turtle move faster or slower? Hint: when a <code class="codespan">tick</code> is running, <code class="codespan">speed</code> doesn&#39;t do anything.</li>
+<li>Can you figure out how to make the turtle move faster or slower? Hint: inside a <code class="codespan">forever</code>, <code class="codespan">speed</code> doesn&#39;t do anything.</li>
 <li>Can you figure out how to make the circle that the turtle goes in bigger or smaller?</li>
 </ol>
 <p>Now try this:</p>
-<pre><code>tick <span class="hljs-number">60</span>, <span class="hljs-function">-&gt;</span>
+<pre><code>forever -&gt;
   <span class="hljs-keyword">if</span> pressed <span class="hljs-string">'up'</span>
     fd <span class="hljs-number">5</span>
   rt <span class="hljs-number">2</span>
-</code></pre><p>Like with <code class="codespan">for</code> loops, make sure everything is indented properly: notice how <code class="codespan">fd 10</code> only happens when the key is pressed, but <code class="codespan">rt 1</code> happens all the time.</p>
+</code></pre><p>Make sure everything is indented properly: notice how <code class="codespan">fd 10</code> only happens when the key is pressed, but <code class="codespan">rt 1</code> happens all the time.</p>
 <h2 id="tasks">Tasks</h2>
 <ol>
 <li>Make a turtle that is controlled by the arrow keys -- move forward, back, and turn left and right.</li>
-<li>Be creative with that turtle! Ideas: make the space key give a speed boost</li>
+<li>Be creative with that turtle! Ideas: make the space key give a speed boost, make the turtle draw and have keys change color.</li>
 </ol>
 
     <script src='vendor/jquery.js'></script>
