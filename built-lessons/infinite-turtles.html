@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/lesson.css'/>
+  </head>
+  <body>
+    <h1 id="infinite-turtles">Infinite Turtles</h1>
+<p>What if you want to control infinite turtles, like for a moving pattern or a shooting game? You need <strong>arrays</strong>.</p>
+<pre><code>everyone = [] <span class="hljs-comment"># A list of all our turtles</span>
+
+forever <span class="hljs-number">2</span>, <span class="hljs-function">-&gt;</span>
+  latest = <span class="hljs-keyword">new</span> Turtle() <span class="hljs-comment"># Make a new turtle</span>
+  everyone.push latest <span class="hljs-comment"># Add it to the list</span>
+
+forever -&gt;
+  <span class="hljs-keyword">for</span> person <span class="hljs-keyword">in</span> everyone <span class="hljs-comment"># Go to each turtle in our list</span>
+    person.fd <span class="hljs-number">5</span> <span class="hljs-comment"># Tell it to move forward</span>
+</code></pre>
+    <script src='vendor/jquery.js'></script>
+    <script src='build/demo.js'></script>
+  </body>
+</html>
