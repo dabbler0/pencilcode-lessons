@@ -8,13 +8,24 @@
 <pre><code>everyone = [] <span class="hljs-comment"># A list of all our turtles</span>
 
 forever <span class="hljs-number">2</span>, <span class="hljs-function">-&gt;</span>
-  latest = <span class="hljs-keyword">new</span> Turtle() <span class="hljs-comment"># Make a new turtle</span>
-  everyone.push latest <span class="hljs-comment"># Add it to the list</span>
+  t = <span class="hljs-keyword">new</span> Turtle() <span class="hljs-comment"># Make a new turtle</span>
+  everyone.push t <span class="hljs-comment"># Add it to the list</span>
 
 forever -&gt;
-  <span class="hljs-keyword">for</span> person <span class="hljs-keyword">in</span> everyone <span class="hljs-comment"># Go to each turtle in our list</span>
-    person.fd <span class="hljs-number">5</span> <span class="hljs-comment"># Tell it to move forward</span>
-</code></pre>
+  <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> everyone <span class="hljs-comment"># Go to each turtle in our list</span>
+    t.fd <span class="hljs-number">5</span> <span class="hljs-comment"># Tell it to move forward</span>
+</code></pre><h2 id="tasks">Tasks</h2>
+<ol>
+<li>How do you make the turtles come out faster or slower? How do you make the turtles speed up or slow down?</li>
+<li>Make the turtles go in a circle instead of a line.</li>
+<li>Can you make the turtles come out in random colors? Where would you need to put this line?<pre><code>t.wear random color
+</code></pre></li>
+</ol>
+<h2 id="extra">Extra</h2>
+<ol>
+<li>Try incorporating this into your game. Some ideas: make infinite prizes appear in random places, make infinite enemies, have turtles shoot out of other turtles.</li>
+</ol>
+
     <script src='vendor/jquery.js'></script>
     <script src='build/demo.js'></script>
   </body>
